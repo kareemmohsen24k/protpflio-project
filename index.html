@@ -1,0 +1,359 @@
+<!DOCTYPE html> 
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kareem - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="scroll-indicator"></div>
+    <header>
+        <nav>
+            <a href="#" class="logo">Kareem</a>
+            <ul>
+                <li><a href="#home" class="active">Home</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="theme-toggle">
+                <i class="fas fa-moon" id="theme-icon"></i>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Kareem</span></h1>
+                <h2>I'm a <span id="role"></span></h2>
+                <p>UI/UX designer and front-end developer creating engaging and intuitive user experiences. Always eager to learn new technologies and improve my skills to deliver the best possible solutions.</p>
+                <div class="social-icons">
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-primary">Hire Me</a>
+                    <a href="#contact" class="btn btn-secondary">Contact</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="صورة واتساب بتاريخ 2025-06-26 في 19.37.33_2faa3c4b.jpg" alt="Kareem">
+                    <div class="image-shape"></div>
+                    <div class="image-dots"></div>
+                    <div class="floating-icon" style="top: 20%; left: 0;"><i class="fab fa-html5"></i></div>
+                    <div class="floating-icon" style="top: 70%; left: 10%;"><i class="fab fa-css3-alt"></i></div>
+                    <div class="floating-icon" style="top: 40%; right: 0;"><i class="fab fa-js"></i></div>
+                    <div class="floating-icon" style="top: 80%; right: 15%;"><i class="fab fa-react"></i></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="hidden">
+            <h2>Skills & Expertise</h2>
+            <div class="skills-container">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML5</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 95%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS3</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 90%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h3>React</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 80%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-node-js"></i>
+                    <h3>Node.js</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 75%"></div>
+                    </div>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-figma"></i>
+                    <h3>Figma</h3>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="width: 85%"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="projects" class="hidden">
+            <h2>Featured Projects</h2>
+            <div class="projects-container">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='350' height='200' viewBox='0 0 350 200'><rect width='100%' height='100%' fill='rgba(0,120,255,0.1)'/><path d='M50,100 L150,50 L250,100 L150,150 Z' fill='rgba(0,120,255,0.3)' stroke='rgba(0,120,255,0.5)' stroke-width='2'/><text x='175' y='105' font-family='Arial' font-size='20' fill='rgba(0,0,0,0.7)' text-anchor='middle'>Portfolio</text></svg>" alt="Portfolio Template Project" style="width:100%; height:100%; object-fit:cover;">
+                    </div>
+                    <h3>Portfolio Template</h3>
+                    <p>Creative portfolio template with smooth animations and interactions.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="#" class="btn btn-small">View Project</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>Dashboard UI</h3>
+                    <p>Admin dashboard with data visualization and user management.</p>
+                    <div class="project-tags">
+                        <span>React</span>
+                        <span>Chart.js</span>
+                        <span>Firebase</span>
+                    </div>
+                    <a href="#" class="btn btn-small">View Project</a>
+                </div>
+                <div class="project-card">
+                    <div class="project-image"></div>
+                    <h3>OrderWithKareem</h3>
+                    <p>A simple tool for sending customized Gmail messages to clients, suitable for small businesses or personal use. Features an Arabic interface with form validation and success notifications.</p>
+                    <div class="project-tags">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Gmail API</span>
+                    </div>
+                    <a href="https://kareemmohsen24k.github.io/OrderWithKareem/" class="btn btn-small" target="_blank">View Project</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="hidden">
+            <h2>Services</h2>
+            <div class="services-container">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-desktop"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom website development with responsive design and modern technologies.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Responsive Design</li>
+                        <li><i class="fas fa-check"></i> SEO Optimization</li>
+                        <li><i class="fas fa-check"></i> Performance Tuning</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>UI/UX Design</h3>
+                    <p>Creative and intuitive user interface designs that enhance user experience.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> User Research</li>
+                        <li><i class="fas fa-check"></i> Wireframing</li>
+                        <li><i class="fas fa-check"></i> Prototyping</li>
+                    </ul>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Mobile App Design</h3>
+                    <p>Designing beautiful and functional mobile applications for iOS and Android.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> Native Apps</li>
+                        <li><i class="fas fa-check"></i> Hybrid Solutions</li>
+                        <li><i class="fas fa-check"></i> App Store Optimization</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials" class="hidden">
+            <h2>Client Testimonials</h2>
+            <div class="testimonials-container">
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/men/32.jpg" alt="Client">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Kareem delivered an exceptional website that perfectly captured our brand's essence. His attention to detail and creative solutions exceeded our expectations."</p>
+                        <div class="testimonial-info">
+                            <h4>Ahmed Hassan</h4>
+                            <span>CEO, TechSolutions</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Client">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Working with Kareem was a pleasure. He understood our requirements perfectly and delivered a stunning website that has significantly improved our online presence."</p>
+                        <div class="testimonial-info">
+                            <h4>Sara Ahmed</h4>
+                            <span>Marketing Director, StyleHub</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-image">
+                        <img src="https://randomuser.me/api/portraits/men/67.jpg" alt="Client">
+                    </div>
+                    <div class="testimonial-content">
+                        <p>"Kareem's expertise in UI/UX design transformed our app. The user engagement metrics have improved dramatically since the redesign."</p>
+                        <div class="testimonial-info">
+                            <h4>Mohamed Ali</h4>
+                            <span>Founder, AppInnovate</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="education" class="hidden">
+            <h2>Education & Experience</h2>
+            <div class="timeline-container">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2018 - 2022</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Computer Science</h3>
+                        <p>Cairo University</p>
+                        <p>Graduated with honors, specializing in web development and UI/UX design.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022 - 2023</div>
+                    <div class="timeline-content">
+                        <h3>Frontend Developer</h3>
+                        <p>TechSolutions Inc.</p>
+                        <p>Developed responsive web applications using React and modern JavaScript frameworks.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 - Present</div>
+                    <div class="timeline-content">
+                        <h3>UI/UX Designer & Developer</h3>
+                        <p>Creative Agency</p>
+                        <p>Leading design and development of web and mobile applications for various clients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="contact" class="hidden">
+            <h2>Get In Touch</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h3>Location</h3>
+                            <p>Cairo, Egypt</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h3>Email</h3>
+                            <p>kareem@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>+20 123 456 7890</p>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Subject">
+                        </div>
+                        <div class="form-group">
+                            <textarea placeholder="Your Message" rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+            </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo">
+                <a href="#" class="logo">Kareem</a>
+                <p>UI/UX Designer & Web Developer</p>
+            </div>
+            <div class="footer-links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-newsletter">
+                <h3>Stay Updated</h3>
+                <p>Subscribe to my newsletter for the latest updates and articles.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Your Email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Kareem. All Rights Reserved.</p>
+            <div class="theme-credit">
+                <span>Made with <i class="fas fa-heart"></i> by Kareem</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script src="script.js"></script>
+</body>
+</html>
