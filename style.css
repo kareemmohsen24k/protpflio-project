@@ -503,6 +503,11 @@ body.dark-mode .project-card {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+body.dark-mode .project-image img {
+    filter: brightness(0.9) contrast(1.1);
+    box-shadow: 0 5px 15px rgba(0, 195, 255, 0.1);
+}
+
 body.dark-mode .project-card::after {
     background: linear-gradient(135deg, rgba(0, 195, 255, 0.05) 0%, transparent 50%);
 }
@@ -540,6 +545,14 @@ body.dark-mode .project-card::after {
     height: 200%;
     background: radial-gradient(circle, rgba(0, 120, 255, 0.2) 0%, transparent 70%);
     animation: rotate 10s linear infinite;
+    z-index: 1;
+}
+
+.project-image img {
+    position: relative;
+    z-index: 2;
+    transition: all 0.4s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 }
 
 @keyframes rotate {
