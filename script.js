@@ -55,6 +55,27 @@ themeToggle.addEventListener('click', () => {
     }
 });
 
+// Welcome screen management
+document.addEventListener('DOMContentLoaded', () => {
+    const welcomeScreen = document.getElementById('welcomeScreen');
+    
+    // Hide welcome screen after animation
+    setTimeout(() => {
+        welcomeScreen.style.display = 'none';
+        document.body.classList.add('loaded');
+    }, 3300);
+    
+    // Header scroll effect
+    const header = document.querySelector('header');
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 100) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+    });
+});
+
 // Scroll reveal effect
 document.addEventListener('DOMContentLoaded', () => {
     const observer = new IntersectionObserver((entries) => {
@@ -94,8 +115,79 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('mousemove', (e) => {
         const x = e.clientX / window.innerWidth;
         const y = e.clientY / window.innerHeight;
-        heroImage.style.transform = `translate(${x * 20 - 10}px, ${y * 20 - 10}px)`;
+        heroImage.style.transform = `translate(${x * 30 - 15}px, ${y * 30 - 15}px) rotateY(${x * 10 - 5}deg) rotateX(${y * 10 - 5}deg)`;
     });
+    
+    // Add ripple effect to buttons
+    const buttons = document.querySelectorAll('.btn');
+    buttons.forEach(btn => {
+        btn.addEventListener('click', function(e) {
+            const ripple = document.createElement('span');
+            const rect = this.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = e.clientX - rect.left - size / 2;
+            const y = e.clientY - rect.top - size / 2;
+            
+            ripple.style.width = ripple.style.height = size + 'px';
+            ripple.style.left = x + 'px';
+            ripple.style.top = y + 'px';
+            ripple.classList.add('ripple');
+            
+            this.appendChild(ripple);
+            
+            setTimeout(() => ripple.remove(), 600);
+        });
+    });
+    
+    // Add staggered animation to timeline items
+    const timelineItems = document.querySelectorAll('.timeline-item');
+    timelineItems.forEach((item, index) => {
+        item.style.animationDelay = `${index * 0.2}s`;
+    });
+    
+    // Enhanced scroll reveal with more effects
+    const scrollElements = document.querySelectorAll('.hidden');
+    const elementInView = (el, offset = 0) => {
+        const elementTop = el.getBoundingClientRect().top;
+        return (
+            elementTop <= 
+            (window.innerHeight || document.documentElement.clientHeight) * (1 - offset)
+        );
+    };
+    
+    const displayScrollElement = (element) => {
+        element.classList.add('visible');
+    };
+    
+    const hideScrollElement = (element) => {
+        element.classList.remove('visible');
+    };
+    
+    const handleScrollAnimation = () => {
+        scrollElements.forEach((el) => {
+            if (elementInView(el, 0.2)) {
+                displayScrollElement(el);
+            }
+        });
+    };
+    
+    window.addEventListener('scroll', () => {
+        handleScrollAnimation();
+    });
+    
+    // Animate numbers/counters (if any exist)
+    const animateValue = (obj, start, end, duration) => {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            obj.innerHTML = Math.floor(progress * (end - start) + start);
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    };
 });
 
 // Active nav link on scroll
